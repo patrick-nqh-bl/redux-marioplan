@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-export const SignedOutLinks = () => {
+const SignedOutLinks = () => {
   return (
     <ul className="right">
       <li><NavLink to="/signup">Signup</NavLink></li>
@@ -9,3 +9,5 @@ export const SignedOutLinks = () => {
     </ul>
   )
 }
+
+export default SignedOutLinks

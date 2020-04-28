@@ -1,4 +1,4 @@
-# Patrick's Project(Using Redux)
+# Patrick's Project(Using Redux, Materialize css,)
 1. Re-code by me:
 2. Issue:
 * “TypeError: Object(…) is not a function” react-redux-firebase
