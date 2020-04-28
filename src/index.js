@@ -15,16 +15,18 @@ const store = createStore(
   rootReducer, 
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reactReduxFirebase(fbConfig),
-    reduxFirestore(fbConfig)
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig, {useFirestoreForProfile: true, userProfile: 'users', attackAuthIsReady: true})
   )
 );
+// Failed to set waiting for Auth ready
+// store.firebaseAuthIsReady.then(() => {
+// })
+    ReactDOM.render(
+      <Provider store={store}>
+          <App />
+      </Provider>,
+      document.getElementById('root')
+    );
+    serviceWorker.unregister();
 
-ReactDOM.render(
-  <Provider store={store}>
-      <App />
-  </Provider>,
-  document.getElementById('root')
-);
-
-serviceWorker.unregister();
