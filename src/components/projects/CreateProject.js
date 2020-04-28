@@ -15,7 +15,9 @@ export class CreateProject extends Component {
   }
   handleSubmit = e => {
     e.preventDefault();
-    this.props.createProject(this.state)
+    this.props.createProject(this.state);
+    // redirect when submit create project
+    this.props.history.push('/');
   }
   render() {
     const { auth } = this.props;
