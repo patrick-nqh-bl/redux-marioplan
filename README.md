@@ -7,3 +7,4 @@
 This is a react-redux-firebase v2.x.x coding pattern and you probably have v3.x.x installed.
 
 * Failed to set waiting for Auth ready.
+* When you login with other account the profile initials not appear. 
