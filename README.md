@@ -1,5 +1,10 @@
 # Patrick's Project(Using Redux, Materialize css, Firebase)
 1. Re-code by me:
+* Deploying to Firebase Hosting:
+> https://www.youtube.com/watch?v=ji6urVl6oP4&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=40 
+* Link deployed on Firebase:
+> https://redux-marioplan-c0e63.web.app/
+* 
 2. Settings rules Firebase:
 
 <br>
