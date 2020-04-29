@@ -9,37 +9,21 @@
 2. Settings rules Firebase:
 
         rules_version = '2';
-        <br>
         service cloud.firestore {
-        <br>
         match /databases/{database}/documents {
-        <br>
             match /projects/{project} {
-        <br>
-            allow read, write: if request.auth.uid != null && request.time < timestamp.date(2020, 5, 28);
-        <br>    
+            allow read, write: if request.auth.uid != null && request.time < timestamp.date(2020, 5, 28);  
             }
-        <br>
             match /users/{userId}{
-        <br>
                 allow create;
-        <br>
             allow read: if request.auth.uid != null;
-        <br>
             allow write: if request.auth.uid == userId;
-        <br>
             }
-        <br>
             match /notifications/{notifications} {
-        <bt>
             allow read: if request.auth.uid != null && request.time < timestamp.date(2020, 5, 28);
-        <bt>
             }
-        <br>
         }
-        <br>
         }
-        <br>
 
 3. Cloud Functions setup:
 > https://www.youtube.com/watch?v=TDUmYMVX3Mc&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=33
