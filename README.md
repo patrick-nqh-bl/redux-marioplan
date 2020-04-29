@@ -1,6 +1,8 @@
 # Patrick's Project(Using Redux, Materialize css, Firebase)
 1. Re-code by me:
 2. Settings rules Firebase:
+
+<br>
 rules_version = '2';
 <br>
 service cloud.firestore {
@@ -27,8 +29,10 @@ service cloud.firestore {
 <br>
 }
 <br>
+
 3. Issue:
-* “TypeError: Object(…) is not a function” react-redux-firebase
+* “TypeError: Object(…) is not a function” react-redux-firebase:
+<br>
 > npm i --save react-redux@5.1.1 react-redux-firebase@2.2.4
 <br>
 This is a react-redux-firebase v2.x.x coding pattern and you probably have v3.x.x installed.
