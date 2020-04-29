@@ -17,12 +17,18 @@ service cloud.firestore {
 <br>
     match /users/{userId}{
 <br>
-    	allow create
+    	allow create;
 <br>
-      allow read: if request.auth.uid != null
+      allow read: if request.auth.uid != null;
 <br>
-      allow write: if request.auth.uid == userId
+      allow write: if request.auth.uid == userId;
 <br>
+    }
+<br>
+    match /notifications/{notifications} {
+<bt>
+      allow read: if request.auth.uid != null && request.time < timestamp.date(2020, 5, 28);
+<bt>
     }
 <br>
   }
@@ -42,3 +48,4 @@ This is a react-redux-firebase v2.x.x coding pattern and you probably have v3.x.
 * Failed to set waiting for Auth ready.
 * When you login with other account the profile initials not appear. (not important)
 * The setting 'timestampsInSnapshots: true' is no longer required and should be removed.
+* Missing or insufficient permissions.
