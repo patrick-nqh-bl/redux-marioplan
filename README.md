@@ -30,13 +30,15 @@ service cloud.firestore {
 }
 <br>
 
-3. Issue:
+3. Cloud Functions setup:
+> https://www.youtube.com/watch?v=TDUmYMVX3Mc&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3&index=33
+
+4. Issue:
 * “TypeError: Object(…) is not a function” react-redux-firebase:
-<br>
 > npm i --save react-redux@5.1.1 react-redux-firebase@2.2.4
 <br>
 This is a react-redux-firebase v2.x.x coding pattern and you probably have v3.x.x installed.
 
 * Failed to set waiting for Auth ready.
-* When you login with other account the profile initials not appear. 
+* When you login with other account the profile initials not appear. (not important)
 * The setting 'timestampsInSnapshots: true' is no longer required and should be removed.
